@@ -1,4 +1,26 @@
-h1 {
-  text-align: center;
-  color: blue;
+body,
+h1,
+p {
+  font-family: "Poppins", sans-serif;
+}
+.currenttemp {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+}
+
+.background {
+  opacity: 30%;
+  margin: auto;
+}
+form {
+  margin: 20px 20px;
+}
+
+.sunicon {
+  color: #ffc83d;
+  font-size: 100px;
+}
+.humid {
+  color: grey;
+  font-size: 100px;
 }
