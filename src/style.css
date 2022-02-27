@@ -24,3 +24,8 @@ form {
   color: grey;
   font-size: 100px;
 }
+a {
+  font-family: "Courier New", Courier, monospace;
+  font-size: small;
+  margin-left: 320px;
+}
