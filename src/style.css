@@ -1,13 +1,9 @@
-.container {
-  max-width: 600px;
-}
-
 body,
 h1,
 p {
   font-family: "Poppins", sans-serif;
 }
-.currenttemp {
+ul {
   font-family: "Poppins", sans-serif;
   font-size: 40px;
 }
