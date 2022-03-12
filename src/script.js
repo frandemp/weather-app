@@ -37,14 +37,12 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-  document.querySelector("#icon");
-  iconElement.setAttribute(
+  document.querySelector("#icon").innerHTML = iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
 function searchCity(city) {
   let apiKey = "c3ca4e6a3eb9e43d1a0547ac53cd671b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
