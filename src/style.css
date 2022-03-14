@@ -42,3 +42,11 @@ a {
   font-family: "Courier New", Courier, monospace;
   font-size: small;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-temp-min {
+  opacity: 0.6;
+}
