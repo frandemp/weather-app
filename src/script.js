@@ -23,7 +23,7 @@ function formatTime(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let days = ["Thur", "Fri", "Sat"];
 
@@ -63,6 +63,12 @@ let dateElement = document.querySelector("#day-time");
 let currentTime = new Date();
 dateElement.innerHTML = formatTime(currentTime);
 
+function getForecast(coordinates) {
+  let apiKey = "c3ca4e6a3eb9e43d1a0547ac53cd671b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#currenttemp").innerHTML = Math.round(
@@ -80,7 +86,10 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
+
 function searchCity(city) {
   let apiKey = "c3ca4e6a3eb9e43d1a0547ac53cd671b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -111,4 +120,3 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Melbourne");
-displayForecast();
