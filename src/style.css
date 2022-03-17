@@ -4,6 +4,7 @@
   padding: 20px;
   border: 1px solid grey;
   border-radius: 5px;
+  background-image: url("images/view.jpg");
 }
 
 body,
@@ -23,9 +24,6 @@ ul {
   opacity: 0.6;
 }
 
-.background {
-  margin: auto;
-}
 form {
   margin: 20px 20px;
 }
@@ -41,4 +39,9 @@ a {
 }
 .weather-forecast-temp-min {
   opacity: 0.6;
+}
+
+.placeholder {
+  opacity: 0.6;
+  color: rgb(190, 185, 185);
 }
