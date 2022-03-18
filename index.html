@@ -1,83 +1,103 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>Weather App</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-        <script
+
+    <script
       src="https://kit.fontawesome.com/fff183db78.js"
       crossorigin="anonymous"
     ></script>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link rel="stylesheet" href="src/style.css" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
   <body>
-     
     <div class="container">
       <div class="weather-app-wrapper">
-       <form class="search-form" id="search">
-<div class="col-9"></div>
-</br>
+        <form class="search-form" id="search" name="search">
+          <div class="col-9"></div>
+          <br />
 
-        <input type="text" placeholder="Search your city..." id="city-input" autocomplete="off"/>
+          <input
+            autocomplete="off"
+            id="city-input"
+            placeholder="Search your city..."
+            type="text"
+          />
+          <input class="btn btn-primary w-10" type="submit" value="Search" />
+        </form>
+        <br />
 
-        <input type="submit" value="Search" class="btn btn-primary w-10"/>
-      
-      </form>
-      
-    </br>   
-        <div class="col-12" >
-            <h1 id="city"></h1>
-            <h4 id="day-time"></h4>
+        <div class="col-12">
+          <h1 id="city"></h1>
+
+          <h4 id="day-time"></h4>
         </div>
-            
-         <div class="row">
-        <div class="col-4"></div>
-          <div class="clearfix">
-            
-            <img src="" alt="Clear" id="icon" class="float-left" />
-            <div class="block"></div>
-            
-            <span class="currenttemp" id="currenttemp"></span>
-            <span class="units">℃</span>
+
+        <!-- row -->
+
+        <div class="row">
+          <!-- Col 1 -->
+
+          <div class="col-4">
+            <div class="clearfix">
+              <div class="block">
+                <img alt="Clear" class="float-left" id="icon" src="" />
+
+                <span class="currenttemp" id="currenttemp"></span>
+                <span class="units">℃</span>
+              </div>
+            </div>
           </div>
-          </div>
-          
-        <div class="col-8">
+
+          <!-- col 2 -->
+
+          <div class="col-8">
             <ul>
-              <li id="description"> </li>           
-              <li>
-                Humidity: <span id="humidity"></span>%</li>
-              <li>
-                Wind: <span id="wind"></span> km/h</li>
+              <li id="description"></li>
+
+              <li>Humidity: <span id="humidity"></span>%</li>
+
+              <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
           </div>
-       </div>
-    </div>
-      
-    </br>
-      <div class="weather-forecast" id="forecast"></div>
-        
-
-      <br>
-      <a href="https://github.com/frandemp/weather-app">GitHub Weather App</a>
         </div>
-         </div>
-   
-  <script src="src/script.js"></script>
-  
+
+        <div class="row">
+          <div class="weather-forecast" id="forecast"></div>
+          <br /><a href="https://github.com/frandemp/weather-app"
+            >GitHub Weather App</a
+          >
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <script src="src/script.js"></script>
   </body>
 </html>
